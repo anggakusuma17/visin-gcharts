@@ -83,7 +83,7 @@ google.charts.setOnLoadCallback(function(){
     <div class="uk-child-width-1-2@s" uk-grid uk-height-match="target: > div > .uk-card">    
         <div>
             <div class="uk-card uk-card-default uk-card-small uk-card-body" >
-                <h3 class="uk-card-title">Penjualan Berdasarkan Region</h3>
+                <h3 class="uk-card-title">Penjualan Berdasarkan Sales</h3>
                 <div id="region" style="height:350px;">
                 	
                 </div>
@@ -91,19 +91,19 @@ google.charts.setOnLoadCallback(function(){
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-small uk-card-body" >
-                <h3 class="uk-card-title">Hasil Penjualan Oleh Sales</h3>
+                <h3 class="uk-card-title">Hasil Penjualan Berdasarkan Region</h3>
                 <div id="sales" style="height:350px;"></div>
             </div>
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-small uk-card-body" >
-                <h3 class="uk-card-title">Produk Terlaris</h3>
+                <h3 class="uk-card-title">Produk Tertidak Laris</h3>
                 <div id="produk" style="height:350px;"></div>
             </div>
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-small uk-card-body" >
-                <h3 class="uk-card-title">Penjualan Bulanan</h3>
+                <h3 class="uk-card-title">Penjualan Januari hingga Maret</h3>
                 <div id="bulanan" style="height:350px;"></div>
             </div>
         </div>
