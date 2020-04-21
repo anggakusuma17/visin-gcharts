@@ -18,17 +18,17 @@ class Visin extends CI_Controller {
         $result=array();
         foreach($data as $row)
         {
-            if(isset($result[$row->Region]) == false)
+            if(isset($result[$row->Rep]) == false)
             {
-                $result[$row->Region]=$row->Units;
+                $result[$row->Rep]=$row->Units;
             }else{
-                $units=$result[$row->Region];
-                $result[$row->Region]=$units + $row->Units;
+                $units=$result[$row->Rep];
+                $result[$row->Rep]=$units + $row->Units;
             }
         };
         //konversi dalam format tabulasi
         $keys=array_keys($result);
-        $tabs=[['Region','Units']];
+        $tabs=[['Rep','Units']];
         foreach($keys as $row)
         {
             $dt=[$row,$result[$row]];
@@ -42,19 +42,19 @@ class Visin extends CI_Controller {
         $result=array();
         foreach($data as $row)
         {
-            if(isset($result[$row->Rep]) == false)
+            if(isset($result[$row->Region]) == false)
             {
-                $result[$row->Rep]=$row->Units;
+                $result[$row->Region]=$row->Units;
             }else{
-                $units=$result[$row->Rep];
-                $result[$row->Rep]=$units + $row->Units;
+                $units=$result[$row->Region];
+                $result[$row->Region]=$units + $row->Units;
             }
         };
         //sorting data berdasarkan value array secara menurun
         arsort($result);
         //konversi dalam format tabulasi
         $keys=array_keys($result);
-        $tabs=[['Sales','Units']];
+        $tabs=[['Region','Units']];
         foreach($keys as $row)
         {
             $dt=[$row,$result[$row]];
@@ -77,10 +77,10 @@ class Visin extends CI_Controller {
             }
         };
         //sorting data berdasarkan value array secara menurun
-        arsort($result);
+        krsort($result);
         //konversi dalam format tabulasi
         $keys=array_keys($result);
-        $tabs=[['Produk','Units']];
+        $tabs=[['Item','Units']];
         foreach($keys as $row)
         {
             $dt=[$row,$result[$row]];
@@ -122,7 +122,7 @@ class Visin extends CI_Controller {
     //membuat data bulan dalam satu tahun
     $bulan=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nop','Des'];
     //memasukkan data penjualan bulanan kedalam tabulasi
-    for($i=1; $i<=12; $i++)
+    for($i=1; $i<=3; $i++)
     {
         $dt=[$bulan[$i-1]];
         foreach($keys as $row)
